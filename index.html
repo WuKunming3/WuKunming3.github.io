@@ -1,8 +1,229 @@
-<p>Hello 大家好</p>
-<p>wkm，这是我的个人网站。 </p>
-<p>很高兴你来到这里, 你可以在以下的网站找到我</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="个人网页, 个人简介, 技能展示, 项目经验">
+    <meta name="description" content="这是一个个人网页模板，展示了个人简介、技能、项目经验和联系方式。">
+    <title>个人网页模板</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-<ul>
-  <li> <a href="https://www.zhihu.com/people/AJLoveChina">WuKunming</a> </li>
-  <li> <a href="http://hejie.nigeerhuo.com">WuKunming</a> </li>
-</ul>
+        body {
+            line-height: 1.6;
+            color: #333333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444444;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #cccccc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background-color: #ffffff;
+            margin: 1rem 0;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-img {
+            text-align: center;
+        }
+
+        .profile-img img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #333333;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-item {
+            background-color: #f0f0f0;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        a.button {
+            display: inline-block;
+            background-color: #333333;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0.5rem 0;
+        }
+
+        a.button:hover {
+            background-color: #444444;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>个人网页模板</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#profile">个人简介</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#projects">项目经验</a></li>
+            <li><a href="#contact">联系方式</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h2>欢迎来到我的个人网页</h2>
+            <p>这是一个展示我个人简介、技能和项目经验的网页模板。</p>
+        </section>
+
+        <section id="profile">
+            <h2>个人简介</h2>
+            <div class="profile-img">
+                <img src="https://via.placeholder.com/150" alt="个人照片">
+            </div>
+            <p>我是[你的名字]，一个热爱技术、设计和创新的人。我致力于在[你的领域]领域不断学习和进步，努力实现自己的梦想。</p>
+        </section>
+
+        <section id="skills">
+            <h2>技能</h2>
+            <div class="skills">
+                <div class="skill-item">
+                    <h3>前端开发</h3>
+                    <p>熟练掌握HTML、CSS和JavaScript，能够构建响应式和高性能的前端应用。</p>
+                </div>
+                <div class="skill-item">
+                    <h3>后端开发</h3>
+                    <p>熟悉Python、Java和Node.js，能够开发和部署后端服务。</p>
+                </div>
+                <div class="skill-item">
+                    <h3>数据库管理</h3>
+                    <p>了解关系型数据库和非关系型数据库，能够进行数据库设计和优化。</p>
+                </div>
+                <div class="skill-item">
+                    <h3>版本控制</h3>
+                    <p>熟练使用Git进行代码管理和协作，能够有效解决分支合并问题。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>项目经验</h2>
+            <div class="project-item">
+                <h3>项目一：[项目名称]</h3>
+                <p>项目描述：这是一个关于[项目描述]的项目，主要功能包括[功能列表]。</p>
+                <p>技术栈：[技术栈列表]</p>
+                <p>我的贡献：[你的贡献]</p>
+                <a href="#" class="button">查看项目</a>
+            </div>
+            <div class="project-item">
+                <h3>项目二：[项目名称]</h3>
+                <p>项目描述：这是一个关于[项目描述]的项目，主要功能包括[功能列表]。</p>
+                <p>技术栈：[技术栈列表]</p>
+                <p>我的贡献：[你的贡献]</p>
+                <a href="#" class="button">查看项目</a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>联系方式</h2>
+            <p>邮箱：[你的邮箱]</p>
+            <p>电话：[你的电话]</p>
+            <p>地址：[你的地址]</p>
+            <p>社交媒体：</p>
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 [你的名字]. 保留所有权利。</p>
+    </footer>
+
+    <script>
+        // 添加导航栏的点击事件
+        document.querySelectorAll('nav ul li a').forEach(item => {
+            item.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
