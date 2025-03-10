@@ -11,24 +11,25 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
         }
 
         body {
-            line-height: 1.6;
+            line-height: 1.8;
             color: #333333;
-            background-color: #f4f4f4;
+            background-color: #ffffff;
         }
 
         header {
-            background-color: #333333;
-            color: #ffffff;
-            padding: 1rem;
+            background-color: #f8f9fa;
+            color: #2c3e50;
+            padding: 1.5rem;
             text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         nav {
-            background-color: #444444;
+            background-color: #3498db;
             padding: 1rem;
         }
 
@@ -45,55 +46,161 @@
         nav ul li a {
             color: #ffffff;
             text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
 
         nav ul li a:hover {
-            color: #cccccc;
+            color: #ecf0f1;
+            transform: translateY(-3px);
         }
 
         .container {
+            display: flex;
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        section {
-            background-color: #ffffff;
-            margin: 1rem 0;
-            padding: 2rem;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .sidebar {
+            width: 30%;
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            margin-right: 2rem;
+        }
+
+        .main-content {
+            width: 70%;
         }
 
         .profile-img {
             text-align: center;
+            margin-bottom: 2rem;
         }
 
         .profile-img img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid #333333;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            border: 3px solid #3498db;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .personal-info h3, .contact-info h3, .education-info h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+        }
+
+        .personal-info p, .contact-info p, .education-info p {
+            margin-bottom: 1rem;
+            color: #555555;
+        }
+
+        section {
+            background-color: #ffffff;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3498db;
         }
 
         .skills {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .skill-item {
-            background-color: #f0f0f0;
-            padding: 1rem;
-            border-radius: 5px;
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
             text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-item h3 {
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+
+        .award-item, .achievement-item, .project-item, .work-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+
+        .award-item:last-child, .achievement-item:last-child, .project-item:last-child, .work-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .award-item h3, .achievement-item h3, .project-item h3, .work-item h3 {
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+
+        .work-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .work-item {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .work-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .work-item .work-content {
+            padding: 1.5rem;
+        }
+
+        .work-item h3 {
+            margin-bottom: 0.8rem;
+        }
+
+        .work-item p {
+            margin-bottom: 1rem;
+            color: #555555;
+        }
+
+        .work-item .work-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top: 1px dashed #e0e0e0;
         }
 
         footer {
-            background-color: #333333;
+            background-color: #2c3e50;
             color: #ffffff;
             text-align: center;
-            padding: 1rem;
+            padding: 1.5rem;
             position: fixed;
             width: 100%;
             bottom: 0;
@@ -101,25 +208,33 @@
 
         a.button {
             display: inline-block;
-            background-color: #333333;
+            background-color: #3498db;
             color: #ffffff;
-            padding: 0.5rem 1rem;
+            padding: 0.8rem 1.5rem;
             text-decoration: none;
             border-radius: 5px;
             margin: 0.5rem 0;
+            transition: all 0.3s ease;
         }
 
         a.button:hover {
-            background-color: #444444;
-        }
-
-        .award-item, .achievement-item {
-            margin: 1rem 0;
+            background-color: #2980b9;
+            transform: scale(1.05);
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 1rem;
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+
+            .main-content {
+                width: 100%;
             }
 
             nav ul {
@@ -153,131 +268,207 @@
     </nav>
 
     <div class="container">
-        <section id="home">
-            <h2>欢迎来到我的个人网页</h2>
-            <p>这是一个展示我个人简介、技能和项目经验的网页模板。</p>
-        </section>
+        <aside class="sidebar">
+            <div class="personal-info">
+                <h3>个人信息</h3>
+                <p>姓名：吴坤明</p>
+                <p>性别：男</p>
+                <p>出生日期：2003年06月</p>
+                <p>贯籍：海南</p>
+            </div>
 
-        <section id="profile">
-            <h2>个人简介</h2>
+            <div class="contact-info">
+                <h3>联系方式</h3>
+                <p>电话：18308984397</p>
+                <p>邮箱：2197639171@qq.com</p>
+                <p>地址：四川省成都市武侯区四川大学</p>
+            </div>
+
+            <div class="education-info">
+                <h3>教育经历</h3>
+                <p>2021年09月 - 2025年06月：四川大学 - 软件工程本科</p>
+                <p>2025年09月 - 2028年06月：四川大学 - 计算机科学与技术硕士</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
             <div class="profile-img">
                 <img src="https://github.com/WuKunming3/WuKunming3.github.io/blob/main/1%E5%AF%B8.jpg?raw=true" alt="个人照片">
             </div>
-            <p>我是吴坤明，一个热爱技术、设计和创新的人。我致力于在软件工程和人工智能领域不断学习和进步，努力实现自己的梦想。</p>
-        </section>
 
-        <section id="skills">
-            <h2>技能</h2>
-            <div class="skills">
-                <div class="skill-item">
-                    <h3>编程语言</h3>
-                    <p>Python，C/C++，JAVA，HTML，CSS，Javascript，SQL</p>
-                </div>
-                <div class="skill-item">
-                    <h3>开发工具</h3>
-                    <p>Pycharm，Visual Studio，VS code，Linux云服务器使用，深度学习相关工具</p>
-                </div>
-                <div class="skill-item">
-                    <h3>数据科学</h3>
-                    <p>Pandas，Numpy等数据科学工具</p>
-                </div>
-                <div class="skill-item">
-                    <h3>深度学习</h3>
-                    <p>Pytorch等深度学习工具，熟悉transformers，RWKV等LLM框架和原理</p>
-                </div>
-                <div class="skill-item">
-                    <h3>LLM相关</h3>
-                    <p>熟悉Bert，GPT等现有的LLM，熟悉CLIP，BLIP2，LLAVA等多模态预训练模型</p>
-                </div>
-                <div class="skill-item">
-                    <h3>通用技能</h3>
-                    <p>Visio，ProcessOn，SpssPro，Tableau，墨刀，JIRA，汽车驾驶（C1），英语（CET-6）</p>
-                </div>
-            </div>
-        </section>
+            <section id="home">
+                <h2>欢迎来到我的个人网页</h2>
+                <p>这是一个展示我个人简介、技能和项目经验的网页模板。</p>
+            </section>
 
-        <section id="education">
-            <h2>教育经历</h2>
-            <div class="education-item">
-                <h3>四川大学 - 软件工程本科</h3>
-                <p>2021年09月 - 2025年06月</p>
-                <p>综测90.25/100（9%），GPA：3.67/4.0（87.9/100）（20%）</p>
-                <p>主要课程：数据结构，数据库系统，计算机网络，操作系统，面向对象程序设计（91），离散数学，模式识别（96），程序设计实训I/II(94/95)，软件工程经济学（100），程序设计基础(99)</p>
-            </div>
-            <div class="education-item">
-                <h3>四川大学 - 计算机科学与技术硕士</h3>
-                <p>2025年09月 - 2028年06月</p>
-            </div>
-        </section>
+            <section id="profile">
+                <h2>个人简介</h2>
+                <p>我是吴坤明，一个热爱技术、设计和创新的人。我致力于在软件工程和人工智能领域不断学习和进步，努力实现自己的梦想。</p>
+            </section>
 
-        <section id="awards">
-            <h2>奖项</h2>
-            <div class="award-item">
-                <h3>美国大学生数学建模大赛一等奖（Meritorious Winner）</h3>
-            </div>
-            <div class="award-item">
-                <h3>中国大学生数学建模大赛四川赛区一等奖</h3>
-            </div>
-            <div class="award-item">
-                <h3>四川大学互联网+创新创业大赛银奖（核心成员）</h3>
-            </div>
-            <div class="award-item">
-                <h3>新加坡国立大学暑期项目优秀学员，A+成绩</h3>
-            </div>
-        </section>
+            <section id="skills">
+                <h2>技能</h2>
+                <div class="skills">
+                    <div class="skill-item">
+                        <h3>编程语言</h3>
+                        <p>Python，C/C++，JAVA，HTML，CSS，Javascript，SQL</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>开发工具</h3>
+                        <p>Pycharm，Visual Studio，VS code，Linux云服务器使用，深度学习相关工具</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>数据科学</h3>
+                        <p>Pandas，Numpy等数据科学工具</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>深度学习</h3>
+                        <p>Pytorch等深度学习工具，熟悉transformers，RWKV等LLM框架和原理</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>LLM相关</h3>
+                        <p>熟悉Bert，GPT等现有的LLM，熟悉CLIP，BLIP2，LLAVA等多模态预训练模型</p>
+                    </div>
+                    <div class="skill-item">
+                        <h3>通用技能</h3>
+                        <p>Visio，ProcessOn，SpssPro，Tableau，墨刀，JIRA，汽车驾驶（C1），英语（CET-6）</p>
+                    </div>
+                </div>
+            </section>
 
-        <section id="achievements">
-            <h2>成果</h2>
-            <div class="achievement-item">
-                <h3>科研成果</h3>
-                <p>IJCNN(CCF-C)会议论文二作录用</p>
-                <p>EI期刊一作录用一项</p>
-                <p>获批软件著作权两项，专利一项（校内实验室项目产出）</p>
-                <p>一篇顶会三作在投（负责画图和少量写作）</p>
-                <p>另有一篇基本完稿文章和多项已完成基础实验的工作（共一及以上）</p>
-            </div>
-        </section>
+            <section id="awards">
+                <h2>奖项</h2>
+                <div class="award-item">
+                    <h3>美国大学生数学建模大赛一等奖（Meritorious Winner）</h3>
+                </div>
+                <div class="award-item">
+                    <h3>中国大学生数学建模大赛四川赛区一等奖</h3>
+                </div>
+                <div class="award-item">
+                    <h3>四川大学互联网+创新创业大赛银奖（核心成员）</h3>
+                </div>
+                <div class="award-item">
+                    <h3>新加坡国立大学暑期项目优秀学员，A+成绩</h3>
+                </div>
+            </section>
 
-        <section id="projects">
-            <h2>项目经验</h2>
-            <div class="project-item">
-                <h3>西门子（中国）成都分公司 IF intern</h3>
-                <p>2024年05月 - 2024年10月</p>
-                <p>1. 在智能制造工作流程中进一步集成了SAM模型，以提高自动化和效率。</p>
-                <p>2. 研究并原型化了VLM+机械臂的实施，以提高制造过程中机械臂的精确度和适应性。</p>
-                <p>3. 基于GroundDINO开发产品计件系统并协调完成产线PLC调试，投入使用。</p>
-            </div>
-            <div class="project-item">
-                <h3>MAS-UAV：一种基于Multi-Agent System的高灵活性无人机任务调度方案</h3>
-                <p>2024年11月 - 至今</p>
-                <p>个人工作：前期调研发现低空经济需求和无人机调度问题，在没有前人研究的情况下首次提出结合将LLM MAS用于低空经济中重要一环，无人机调度的想法并详细调研相关论文，提出详细实现方案，进行初步代码实验，详细实验探索。</p>
-                <p>项目进展：目前已完成可行性分析和初步实验，接下来将进一步完善方案并做更多的大规模实验。</p>
-            </div>
-            <div class="project-item">
-                <h3>G-Meomory：基于图结构存储的Multi-Agent System记忆调度方法</h3>
-                <p>2024年11月 - 至今</p>
-                <p>个人工作：分析目前RAG和MAS Memory相关研究，提出问题，并创新性的引入使用图结构存储构建记忆机制的想法，并进行初期尝试，完成储存机制代码，并进行初步实验，并继续完善方案，对完成最终方法和批量实验做准备。</p>
-                <p>项目结果：目前已完成可行性分析和初步实验，接下来将进一步完善方案并做更多的大规模实验。</p>
-            </div>
-            <div class="project-item">
-                <h3>基于知识图谱的精神病医疗问答系统（省级大创）</h3>
-                <p>2022年09月 - 2023年07月</p>
-                <p>个人工作：调研大量论文，研报，从业人员，确定精神病方面知识图谱工作的缺失，探讨并设计方案，使用爬虫获得的数据，公开数据集和华西医院的数据构造精神病知识图谱，基于知识图谱和LLM完成问答系统的构建。创新性的提出基于知识图谱的贝叶斯网络问答模型。</p>
-                <p>项目结果：目前已完成模型初步训练和问答平台的初步构建，并已获批一项软著。</p>
-            </div>
-            <div class="project-item">
-                <h3>基于蛋白质预训练模型的MHCI类和肽段亲和力预测模型</h3>
-                <p>2022年11月 - 2023年05月</p>
-                <p>个人工作：提出使用预训练的蛋白质编码器对预测模型进行优化，使用ProteinBert作为编码器进行模型训练，在同个分类器下相比非参数化的蛋白质编码方式得到了显著提高，并将NLP中prefix	prompt的模式引入蛋白质编码，进一步提高了模型性能。</p>
-                <p>项目结果：通过多项实验完成了预训练模型用于亲和力预测的探索。</p>
-            </div>
-        </section>
+            <section id="achievements">
+                <h2>成果</h2>
+                <div class="achievement-item">
+                    <h3>科研成果</h3>
+                    <p>IJCNN(CCF-C)会议论文二作录用</p>
+                    <p>EI期刊一作录用一项</p>
+                    <p>获批软件著作权两项，专利一项（校内实验室项目产出）</p>
+                    <p>一篇顶会三作在投（负责画图和少量写作）</p>
+                    <p>另有一篇基本完稿文章和多项已完成基础实验的工作（共一及以上）</p>
+                </div>
+            </section>
 
-        <section id="contact">
-            <h2>联系方式</h2>
-            <p>电话：18308984397</p>
-            <p>邮箱：2197639171@qq.com</p>
-        </section>
+            <section id="works">
+                <h2>绘图和PPT</h2>
+                <div class="work-gallery">
+                    <!-- 工作1 -->
+                    <div class="work-item">
+                        <div class="work-content">
+                            <h3>论文配图一</h3>
+                            
+                        </div>
+                        <img class="work-image" src="https://github.com/WuKunming3/WuKunming3.github.io/blob/main/1.png" alt="工作1">
+                    </div>
+
+                    <!-- 工作2 -->
+                    <div class="work-item">
+                        <div class="work-content">
+                            <h3>比赛的精益画布</h3>
+                           
+                        </div>
+                        <img class="work-image" src="https://github.com/WuKunming3/WuKunming3.github.io/blob/main/2.png" alt="工作2">
+                    </div>
+
+                    <!-- 工作3 -->
+                    <div class="work-item">
+                        <div class="work-content">
+                            <h3>某个基金申请材料配图</h3>
+                            
+                        </div>
+                        <img class="work-image" src="https://github.com/WuKunming3/WuKunming3.github.io/blob/main/3.png" alt="工作3">
+                    </div>
+		<!-- 工作4 -->
+                    <div class="work-item">
+                        <div class="work-content">
+                            <h3>论文配图二</h3>
+                          
+                        </div>
+                        <img class="work-image" src="https://github.com/WuKunming3/WuKunming3.github.io/blob/main/4.png" alt="工作4">
+                    </div>
+		<!-- 工作5 -->
+                    <div class="work-item">
+                        <div class="work-content">
+                            <h3>数模配图一</h3>
+                          
+                        </div>
+                        <img class="work-image" src="https://github.com/WuKunming3/WuKunming3.github.io/blob/main/5.png" alt="工作5">
+                    </div>
+		<!-- 工作6 -->
+                    <div class="work-item">
+                        <div class="work-content">
+                            <h3>数模配图二</h3>
+                          
+                        </div>
+                        <img class="work-image" src="https://github.com/WuKunming3/WuKunming3.github.io/blob/main/6.png" alt="工作6">
+                    </div>
+		<!-- 工作6 -->
+                    <div class="work-item">
+                        <div class="work-content">
+                            <h3>数模配图三</h3>
+                          
+                        </div>
+                        <img class="work-image" src="https://github.com/WuKunming3/WuKunming3.github.io/blob/main/7.png" alt="工作7">
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>项目经验</h2>
+                <div class="project-item">
+                    <h3>西门子（中国）成都分公司 IF intern</h3>
+                    <p>2024年05月 - 2024年10月</p>
+                    <p>1. 在智能制造工作流程中进一步集成了SAM模型，以提高自动化和效率。</p>
+                    <p>2. 研究并原型化了VLM+机械臂的实施，以提高制造过程中机械臂的精确度和适应性。</p>
+                    <p>3. 基于GroundDINO开发产品计件系统并协调完成产线PLC调试，投入使用。</p>
+                </div>
+                <div class="project-item">
+                    <h3>MAS-UAV：一种基于Multi-Agent System的高灵活性无人机任务调度方案</h3>
+                    <p>2024年11月 - 至今</p>
+                    <p>个人工作：前期调研发现低空经济需求和无人机调度问题，在没有前人研究的情况下首次提出结合将LLM MAS用于低空经济中重要一环，无人机调度的想法并详细调研相关论文，提出详细实现方案，进行初步代码实验，详细实验探索。</p>
+                    <p>项目进展：目前已完成可行性分析和初步实验，接下来将进一步完善方案并做更多的大规模实验。</p>
+                </div>
+                <div class="project-item">
+                    <h3>G-Meomory：基于图结构存储的Multi-Agent System记忆调度方法</h3>
+                    <p>2024年11月 - 至今</p>
+                    <p>个人工作：分析目前RAG和MAS Memory相关研究，提出问题，并创新性的引入使用图结构存储构建记忆机制的想法，并进行初期尝试，完成储存机制代码，并进行初步实验，并继续完善方案，对完成最终方法和批量实验做准备。</p>
+                    <p>项目结果：目前已完成可行性分析和初步实验，接下来将进一步完善方案并做更多的大规模实验。</p>
+                </div>
+                <div class="project-item">
+                    <h3>基于知识图谱的精神病医疗问答系统（省级大创）</h3>
+                    <p>2022年09月 - 2023年07月</p>
+                    <p>个人工作：调研大量论文，研报，从业人员，确定精神病方面知识图谱工作的缺失，探讨并设计方案，使用爬虫获得的数据，公开数据集和华西医院的数据构造精神病知识图谱，基于知识图谱和LLM完成问答系统的构建。创新性的提出基于知识图谱的贝叶斯网络问答模型。</p>
+                    <p>项目结果：目前已完成模型初步训练和问答平台的初步构建，并已获批一项软著。</p>
+                </div>
+                <div class="project-item">
+                    <h3>基于蛋白质预训练模型的MHCI类和肽段亲和力预测模型</h3>
+                    <p>2022年11月 - 2023年05月</p>
+                    <p>个人工作：提出使用预训练的蛋白质编码器对预测模型进行优化，使用ProteinBert作为编码器进行模型训练，在同个分类器下相比非参数化的蛋白质编码方式得到了显著提高，并将NLP中prefix prompt的模式引入蛋白质编码，进一步提高了模型性能。</p>
+                    <p>项目结果：通过多项实验完成了预训练模型用于亲和力预测的探索。</p>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>联系方式</h2>
+                <p>电话：18308984397</p>
+                <p>邮箱：2197639171@qq.com</p>
+            </section>
+        </main>
     </div>
 
     <footer>
